@@ -54,7 +54,7 @@ export default function Form() {
                     </div><br />
                     <div>
                         <label>Email</label><br />
-                        <input {...register("mail", { required: true, pattern: /^[a-z@.]/g })}
+                        <input type="email" {...register("mail", { required: true, pattern: /^[a-z@.]/g })}
                             aria-invalid={errors.mail?.message} />
                         {errors.mail?.type === 'pattern' && <p className='warning' role="alert">This Email is not valid</p>}
                         {errors.mail?.type === 'required' && <p className='warning' role="alert">Email is required</p>}
@@ -104,8 +104,9 @@ export default function Form() {
                         <label>Expiration</label><br />
                         <input type="date" {...register("expiryDate")} /><br /><br />
                         <label>CVV</label><br />
-                        <input {...register("cvv", { required: true, pattern: /[0-9]/ })} />
-
+                        <input type="number" {...register("cvv", { required: true, minLength: 3, maxLength: 3 })} />
+                        {errors.cvv?.type === 'minLength' && <p className='warning' role="alert">this CVV is not valid</p>}
+                        {errors.cvv?.type === 'maxLength' && <p className='warning' role="alert">this CVV is not valid</p>}
                     </div><br /><hr />
 
                     <input className='Submit' type="submit" />
