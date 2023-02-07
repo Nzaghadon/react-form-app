@@ -1,0 +1,57 @@
+body {
+    background-color: blanchedalmond;
+    text-align: center;
+    height: max-content;
+    width: 50%;
+    margin: auto;
+    position: relative;
+}
+
+
+
+input {
+    margin-left: 50px;
+    margin-top: 5px;
+    position: relative;
+}
+
+
+
+select {
+    margin-top: 5px;
+}
+
+
+
+label {
+    border: 1px solid grey;
+    border-radius: 3px;
+    text-shadow: 50px;
+    margin-left: 5px;
+    border-left: 2px;
+    border-right: 2px;
+    position: relative;
+
+}
+
+.Form {
+    border: 20px solid gray;
+    border-radius: 5px;
+    position: relative;
+}
+
+.Submit {
+    height: 40px;
+    width: 20rem;
+    margin-bottom: 20px;
+}
+
+.warning {
+    font-size: small;
+    color: red;
+}
+
+
+/* .Country {
+    margin-left: 20px;
+} */
